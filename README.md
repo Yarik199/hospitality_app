@@ -1,6 +1,6 @@
 # Hospitality App
 
-##Key features
+## Key features
 
 * filtering hotels by rating and rooms by adults and children
 * viewing hotel images in carousel if more than one image available 

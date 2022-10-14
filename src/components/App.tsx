@@ -65,7 +65,7 @@ function App() {
         <>
             <Header />
             {!loading && !error && <FilterBar onFiltersUpdate={onFiltersUpdate} filters={filters} />}
-            <HotelList hotels={hotels} rooms={rooms} filters={filters} loading={loading} error={error}/>
+            <HotelList hotels={hotels} rooms={rooms} filters={filters} loading={loading} error={error} />
             {!loading && !error && <Footer />}
         </>
     );
