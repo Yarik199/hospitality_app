@@ -1,15 +1,13 @@
-export const header = {
-    width: '100%',
+export const headerContainer = {
     maxHeight: '200px',
-    objectFit: 'cover',
-    backgroundColor: '#fff',
-    display: 'none'
 }
 
-export const loadingContainer = {
-    width: '100%',
-    height: '200px',
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center'
+export const headerImageStyles = (loaded: boolean) => {
+    return {
+        width: '100%',
+        maxHeight: '200px',
+        objectFit: 'cover',
+        backgroundColor: '#fff',
+        display: loaded ? 'inline-block' : 'none'
+    }
 }

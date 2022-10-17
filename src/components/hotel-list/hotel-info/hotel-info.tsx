@@ -8,11 +8,12 @@ import {
     hotelInfoContainer,
     hotelImageContainer,
     hotelDescriptionContainer,
-    imageResponsiveStyles,
     h1Styles,
     pStyles
 } from './styles'
-import { Hotel } from "../../../common/types";
+import { Hotel } from '../../../common/types'
+import Image from '../../common/image'
+
 
 interface HotelInfoProps {
     hotel: Hotel,
@@ -29,7 +30,7 @@ const HotelInfo: React.FC<HotelInfoProps> = ({ hotel, doesRoomsAvailable, isMobi
                 <Carousel {...getCarouselSettings(images, isMobile)}>
                     {map(images, (image, index) => {
                         return (
-                            <Box key={index} sx={imageResponsiveStyles(isMobile)} component="img" src={image.url} alt="Hotel image" />
+                            <Image key={index} src={image.url} isMobile={isMobile} />
                         )
                     })}
                 </Carousel>

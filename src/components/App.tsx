@@ -7,6 +7,8 @@ import FilterBar from './filter-bar/filter-bar'
 import Footer from './footer/footer'
 import HotelList from './hotel-list/hotel-list'
 import { Filters, Hotel, Room } from '../common/types'
+import { Box } from '@mui/material'
+import { mainContainer } from './styles'
 
 const useHotelsAndRooms = () => {
     const [hotels, setHotels] = useState<Hotel[]>([])
@@ -64,8 +66,10 @@ function App() {
     return (
         <>
             <Header />
-            {!loading && !error && <FilterBar onFiltersUpdate={onFiltersUpdate} filters={filters} />}
-            <HotelList hotels={hotels} rooms={rooms} filters={filters} loading={loading} error={error} />
+            <Box component="main" sx={mainContainer}>
+                {!loading && !error && <FilterBar onFiltersUpdate={onFiltersUpdate} filters={filters} />}
+                <HotelList hotels={hotels} rooms={rooms} filters={filters} loading={loading} error={error} />
+            </Box>
             {!loading && !error && <Footer />}
         </>
     );
