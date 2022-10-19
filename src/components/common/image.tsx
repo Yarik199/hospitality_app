@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, memo } from 'react'
 import Box from '@mui/material/Box'
 import { CircularProgress } from '@mui/material'
 import Grow from '@mui/material/Grow'
@@ -28,4 +28,4 @@ const Image: React.FC<ImageProps> = ({ src, isMobile = false, isHeader = false }
     )
 }
 
-export default Image
+export default memo(Image)
